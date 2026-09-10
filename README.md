@@ -1,58 +1,58 @@
 # TTCore LINE Account Transfer
 
-Primary token kullanarak kısa ömürlü bir QR kod oluşturan ve LINE hesabına yeni telefondan giriş/hesap aktarımı yapılmasını sağlayan masaüstü çözümüdür.
+A desktop solution that generates a short-lived QR code from a primary token, allowing users to sign in to or transfer a LINE account on a new phone.
 
-> Bu depo yalnızca ürün tanıtımı amacıyla hazırlanmıştır. Kaynak kod paylaşılmamaktadır.
+> This repository is for product presentation purposes only. The source code is not publicly available.
 
-## Ne işe yarar?
+## What Does It Do?
 
-TTCore LINE Account Transfer, geçerli bir LINE primary token'ı doğrular ve tek kullanımlık bir QR oturumu oluşturur. Oluşturulan QR kod, yeni telefondaki resmi LINE uygulamasıyla taranarak giriş veya hesap aktarımı sürecinin tamamlanmasını sağlar.
+TTCore LINE Account Transfer validates a valid LINE primary token and creates a single-use QR session. The generated QR code can be scanned with the official LINE app on the new phone to complete the sign-in or account transfer process.
 
-## Özellikler
+## Features
 
-- Primary token doğrulama
-- Kısa ömürlü ve tek kullanımlık QR kod üretimi
-- Telefondan QR kod ile LINE hesabına giriş/hesap aktarımı
-- Hesap adını doğrulama ekranında gösterme
-- Aktarım durumunu anlık takip etme
-- Başarılı, süresi dolmuş ve başarısız işlemler için anlaşılır durum mesajları
-- Yerel web arayüzü
-- Windows 10 ve Windows 11 desteği
-- Kolay başlatma ve sade kullanım akışı
-- Token, QR oturum bilgisi ve özel anahtarları uygulama loglarına yazmayan güvenlik yaklaşımı
-- İşlem tamamlandığında veya süre dolduğunda geçici oturum verilerini bellekten temizleme
+- Primary token validation
+- Short-lived, single-use QR code generation
+- LINE account sign-in or transfer from a mobile phone using a QR code
+- Account name display for verification
+- Real-time transfer status tracking
+- Clear status messages for successful, expired, and failed operations
+- Local web interface
+- Windows 10 and Windows 11 support
+- Simple startup and straightforward workflow
+- Security-focused design that does not write tokens, QR session data, or private keys to application logs
+- Automatic removal of temporary session data from memory after completion or expiration
 
-## Nasıl çalışır?
+## How Does It Work?
 
-1. Kullanıcı, sahibi olduğu veya yönetme yetkisine sahip olduğu hesaba ait geçerli primary token'ı uygulamaya girer.
-2. Uygulama token'ı doğrular ve hesaba özel, kısa ömürlü bir QR kod oluşturur.
-3. Yeni telefonda resmi LINE uygulaması açılır.
-4. **Giriş yap > QR kod ile giriş yap > QR kodu tara** adımları izlenir.
-5. Ekrandaki QR kod telefonla taranır.
-6. Telefon doğrulamasının ardından giriş/hesap aktarımı tamamlanır.
+1. Enter a valid primary token for an account you own or are explicitly authorized to manage.
+2. The application validates the token and generates a short-lived QR code for the account.
+3. Open the official LINE app on the new phone.
+4. Select **Log in > Log in with QR code > Scan QR code**.
+5. Scan the QR code displayed by the application.
+6. Complete the phone verification to finish signing in or transferring the account.
 
-QR oturumları kısa sürelidir. Süre dolarsa yeni bir QR kod oluşturulmalıdır. Başarılı bir aktarım, önceki ana cihazdaki oturumu kapatabilir.
+QR sessions are short-lived. If a session expires, generate a new QR code. A successful transfer may sign out the previous primary device.
 
-## Güvenlik ve sorumlu kullanım
+## Security and Responsible Use
 
-- Primary token hiçbir zaman başka kişilerle paylaşılmamalıdır.
-- Yalnızca size ait veya yönetmek için açıkça yetkilendirildiğiniz hesaplarda kullanılmalıdır.
-- Uygulama yerel bilgisayarda çalışacak şekilde tasarlanmıştır.
-- Primary token diske veya uygulama loglarına yazılmaz; işlem sırasında yalnızca bellekte tutulur.
-- QR oturum verileri işlem tamamlandığında veya süre dolduğunda temizlenir.
-- Bu proje LINE Corporation'ın resmi ürünü değildir ve LINE ile bağlantılı veya LINE tarafından desteklenmiş değildir.
+- Never share your primary token with anyone.
+- Use the software only with accounts you own or are explicitly authorized to manage.
+- The application is designed to run locally on the user's computer.
+- The primary token is not written to disk or application logs; it is held in memory only while needed.
+- QR session data is removed after the operation is completed or expires.
+- This project is not an official LINE Corporation product and is not affiliated with, endorsed by, or supported by LINE.
 
-## Satış ve lisanslama
+## Sales and Licensing
 
-Bu yazılımın kaynak kodu ve kullanım lisansı satışa sunulmuştur. Satın alma, fiyatlandırma, lisans kapsamı, kurulum ve teknik destek bilgileri için WhatsApp üzerinden iletişime geçebilirsiniz.
+The source code and software license are available for purchase. Contact us on WhatsApp for pricing, licensing terms, installation, and technical support.
 
 **WhatsApp:** [0546 805 65 12](https://wa.me/905468056512)
 
-## Kaynak kod
+## Source Code
 
-Kaynak kod bu depoda yayımlanmamaktadır. Bu depo ürünün yeteneklerini ve çalışma şeklini genel hatlarıyla tanıtmak amacıyla hazırlanmıştır.
+The source code is not published in this repository. This repository provides a high-level overview of the product, its capabilities, and its workflow.
 
-## Yasal not
+## Legal Notice
 
-Alıcı ve kullanıcı; ilgili hizmet koşullarına, yürürlükteki mevzuata ve hesap sahibinin açık yetkisine uygun hareket etmekten sorumludur.
+The buyer and user are responsible for complying with the applicable service terms, laws, regulations, and the account owner's explicit authorization.
 
